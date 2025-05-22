@@ -3,35 +3,36 @@
     height: 24px;
     background-image: url("../img/Menu.svg");
     display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-repeat: no-repeat; /* faz com que a imagem de fundo aplicado no hearder parede que ficar se repetindo*/
+    background-position: center; /* faz com que a imagem fique centralizada */
 }
 
 .cabecalho {
     background-color: var(--branco);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+    display: flex; /* tornar o header por completo flexivel*/
+    justify-content: space-between; /* separa cada elemento com o mesmo espaço entrew entre eles, por só ter duas "div's, cada uma foi para um canto da tela" */
+    align-items: center; /*centraliza os itens no meio da linha do header*/
+    position: relative; /*permite colocar outros atributos, como por ex: direita e esqueda.. tornando ele em um objeto não estatico*/
 }
 
 .container {
-    display: flex;
-    align-items: center;
+    display: flex; /*torna a div's que tem class container flexiveis */
+    align-items: center; /*a linha os itens dentro div's centralizados */
 }
 
 .container__imagem {
-    padding: 1em;
+    padding: 1em; /*da um espaçamento entre cada item que possui a class*/
 }
 
 .lista-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
+    display: none; /*responsavel por esconder o menu */
+    position: absolute; /*permite mover o elemento filho, desde que o elemento pai não esteja estatico*/
+    top: 100%; /* tirou 100% do cabeçalho e ficou para baixo*/
+    width: 60vw; /*ajusta a largura para 60 do viewport*/
 }
 
-.container__botao:checked~.lista-menu {
-    display: block;
+.container__botao:checked~.lista-menu { /* caso o input de tipo checkbox da class "container__botao" estibver ativo, ele realizar o comando que está dentro  das {chaves}*/
+    display: block; /*neste caso o quando o checkbox estiver ativo, ele vai fazer com a lista da classe lista-menu se torno em bloco visivel, já que ocutamos ela com display none*/
 }
 
 .lista-menu__titulo,
@@ -42,10 +43,16 @@
 
 .lista-menu__titulo {
     color: var(--laranja);
+    font-weight: 700;
 }
 
 .lista-menu__Link {
-    color: var(--azul-degrade);
+    background: var(--azul-degrade);
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+.container__botao{
+    display: none;
 }
