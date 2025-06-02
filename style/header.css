@@ -104,6 +104,8 @@
         display: block;
         width: auto;
     }
-    .opções__botao{}
+    .opções__botao{
+        display: none;
+    }
 }
 
