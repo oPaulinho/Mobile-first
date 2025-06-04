@@ -31,7 +31,6 @@
     color: var(--azul);
 }
 
-
 .contato__email::placeholder {
     font-family: var(--fonte-principal);
     color: var(--azul);
@@ -60,4 +59,10 @@
     }
 
 
+}
+
+@media screen and (min-width: 1728px) {
+    .contato{
+        padding: 3em 20vw;
+    }
 }
